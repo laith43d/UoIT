@@ -1,6 +1,5 @@
 import math
 
-
 # All types in Python are objects
 a = 2
 
@@ -11,13 +10,13 @@ d = 3.232
 pi = 3.14
 
 print(type(a))
+number: int = 2
 
 # This is the real deal
 print(a.__add__(5))
 
 # This is syntactic sugar!
 print(a + 5)
-
 
 # Python deals with complex numbers natively
 comp1 = 2 + 3j
@@ -42,10 +41,14 @@ print(type(2))
 print(type(2.1))
 print(type('a'))
 
+print('a' == 'a')
+print('a' == 'A')
+print(2 == 2)
+
 # The difference between '=='  and 'is'
 print(2 == 2)
 print(2 == 2.0)
-print(2 is 2)
+print(2 is not 2)
 print(2 is 2.0)
 
 _x = 2
@@ -54,27 +57,59 @@ _x = 2
 # 9x = 2 - Invalid syntax
 # $x = 2 - Invalid syntax
 
+# list, set, dictionary, tuple
+
+# tuple
+
+tuple_a = (1, 2, 3)
+print(type(tuple_a))
+
+# list
+
+list_a = [1, 2, 3]
+print(type(list_a))
+
+# set
+
+set_a = {1, 2, 3}
+print(type(set_a))
+
+# dictionary
+
+dictionary_a = {'x': 2, 'y': 5}
+print(type(dictionary_a))
+
+# unpacking
 a, b, c = 1, 2, 3
 
 # packing and unpacking
-a, *b, c = [1, 2, 3, 4]
-
-print(b)
-
-a, b, *c = [1, 2, 3, 4]
+a, *b, c = [1, 2, 5, 6, 3, 4]
 
 print(a)
 print(b)
 print(c)
 
+a, b, *c = [1, 2, 3, 4, 5, 6]
+
+print(a)
+print(b)
+print(c)
+
+a, *b = [1, 2, 3, 4, 5, 6]
+
+iterable_list = [1, 2, 3, 4, 5, 6]
+
+print(iterable_list[1])
+
+for i, v in enumerate(iterable_list):
+    print(i, v)
+
 
 def afunction(*args):
-    print(args)
-    for arg in args:
-        print(arg)
+    print(sum(args))
 
 
-afunction(1, 2, 3, 4)
+afunction(1, 2, 3, 4, 5, 6, 7)
 
 # collections
 # tuple, list, set, dictionary
@@ -91,26 +126,56 @@ d = {'x': 1,
      }
 print(type(d))
 
+dictionary_type_one = {
+    'x': 1,
+    'y': 2
+}
+
 
 def bfunction(*args, **kwargs):
     print(args, kwargs)
 
 
-bfunction(1, 2, 3, a=1, b=5)
+def cfunction(arg1, arg2, arg3, arg4: int = 3):
+    print(arg1, arg2, arg3)
+
+
+cfunction(1, 2, 3, arg4=6)
+
+bfunction(1, 2, 3, 4, a=1, b=5, c='x')
 
 # string is a special type of collections
-name = 'layth'
+name = 'laythzuhair'
+
+for i, v in enumerate(name):
+    print(i, v)
+
+print(name[0])
+
 print(name)
 print(name.capitalize())
 print(name.upper())
+
+# slicing [start:stop:step]
+
 print(name[::-1])
 
 print(name)
 print(name[0])
 print(name[1])
-print(name[0:2])
+print(name[1:7:2])
 print(name[:])
 print(name[::2])
+
+print(name[-1::-2])
+
 print(name[::-1])
 
+palindrome = 'abcdcba'
+
+if palindrome == palindrome[::-1]:
+    print("palindrome")
+
 print(b[::-1])
+
+

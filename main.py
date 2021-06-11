@@ -20,16 +20,28 @@ if __name__ == "__main__":
 #
 # print(len(kwlist))
 # print(kwlist)
-#
-# print([i for i in range(10) if i % 2 == 0])
-#
-# print({i + 1: v for i, v in enumerate(range(10))})
-#
-# print({i for i in range(10)})
-#
-# print((i for i in range(10)))
-#
 
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for i in my_list:
+    if i % 2 ==0:
+        print(i * 2)
+
+for i, v in enumerate(my_list):
+    print(i, v)
+
+# [var for var in range(10)]
+your_list = [i * 2 for i in my_list]
+
+odd_numbers = [i*2 for i in my_list if i % 2 == 0]
+
+print([i for i in range(10) if i % 2 == 0])
+
+print({i: v for i, v in enumerate(my_list)})
+
+# print({i for i in range(10)})
+
+print((i for i in range(10)))
 
 '''
 1. List comprehension
@@ -37,4 +49,9 @@ if __name__ == "__main__":
 3. Dictionary
 4. Generator expressions
 5. Functions
+'''
+
+'''
+5. Project
+
 '''
