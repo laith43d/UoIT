@@ -41,12 +41,12 @@ print(type(2))
 print(type(2.1))
 print(type('a'))
 
-print('a' == 'a')
+print(True)
 print('a' == 'A')
-print(2 == 2)
+print(True)
 
 # The difference between '=='  and 'is'
-print(2 == 2)
+print(True)
 print(2 == 2.0)
 print(2 is not 2)
 print(2 is 2.0)

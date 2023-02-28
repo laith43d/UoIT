@@ -37,11 +37,11 @@ odd_numbers = [i*2 for i in my_list if i % 2 == 0]
 
 print([i for i in range(10) if i % 2 == 0])
 
-print({i: v for i, v in enumerate(my_list)})
+print(dict(enumerate(my_list)))
 
 # print({i for i in range(10)})
 
-print((i for i in range(10)))
+print(iter(range(10)))
 
 '''
 1. List comprehension
